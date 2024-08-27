@@ -63,15 +63,15 @@ def f_password(type):
             else:
                 print(f"{WH}Your password fails to satisfy the following conditions:{RS}")
                 print(f"{GR}" if len(password) >= 8 else f"{RD}",
-                      "   > At least 8 characters long.{RS}", sep='')
+                      "   > At least 8 characters long.", sep='')
                 print(f"{GR}" if any(i.isupper() for i in password) else f"{RD}",
-                      "   > Contain at least one UPPERCASE character.{RS}", sep='')
+                      "   > Contain at least one UPPERCASE character.", sep='')
                 print(f"{GR}" if any(i.islower() for i in password) else f"{RD}",
-                      "   > Contain at least one lowercase character.{RS}", sep='')
+                      "   > Contain at least one lowercase character.", sep='')
                 print(f"{GR}" if any(i.isdigit() for i in password) else f"{RD}",
-                      "   > Contain at least one numerical character.{RS}", sep='')
+                      "   > Contain at least one numerical character.", sep='')
                 print(f"{GR}" if any(i in string.punctuation for i in password) else f"{RD}",
-                      "   > Contain at least one special character.{RS}", sep='')
+                      "   > Contain at least one special character.", sep='')
         else:
             return password
 
